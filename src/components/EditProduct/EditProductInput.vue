@@ -156,7 +156,7 @@
             <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
             <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
         </div>
-        <input id="dropzone-file" name="image" type="file" class="hidden" />
+        <input id="dropzone-file" name="photos" type="file" class="hidden" />
     </label>
 </div> 
 </div>
@@ -176,6 +176,7 @@
 import { mapGetters, mapActions } from "vuex";
 export default {
   name: "EditProductInput",
+  inject: ["responseAlert"],
   data() {
     return {
       product: {},
@@ -184,11 +185,31 @@ export default {
   },
   methods: {
     updateProduct() {
-      const id = this.product.id;
       const formData = new FormData(this.$refs.form);
+      const validationData = Object.fromEntries(formData)
+      const id = this.product.id;
+      if(!validationData.name) {
+        this.error = 'الرجاء ادخال اسم المنتج'
+        console.log(this.error);
+        this.responseAlert(this.error, " عفوا ", "warning");
+        return
+      }
+      if(!validationData.qty) {
+        this.error = 'الرجاء ادخال كمية المنتج'
+        console.log(this.error);
+        this.responseAlert(this.error, " عفوا ", "warning");
+        return
+      }
+      if(!validationData.photos.name) {
+        this.error = 'الرجاء ادخال صورة المنتج'
+        console.log(this.error);
+        this.responseAlert(this.error, " عفوا ", "warning");
+        return
+      }
       const payload = { id, product: formData };
       this.$store.dispatch("updateProduct", payload);
-      
+      this.success = true;
+      this.$router.push({path: '/ProductsPage'});
     },
     ...mapActions(['fetchCategories'])
   },

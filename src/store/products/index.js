@@ -2,7 +2,7 @@ import axios from "axios";
 
 const state = {
   products: [],
-  session_url: "https://www.mod-bina.com/api/v1/products",
+  session_url: "https://mod-bina.com/api/v1/products",
   config: {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("user_token"),

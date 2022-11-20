@@ -39,7 +39,7 @@
             {{++index}}
           </th>
           <td class="px-6 py-4">
-              <img :src="'http://localhost:5000/uploads/' + product.image.image" alt="" class="w-20">
+              <img :src="'https://mod-bina.com/uploads/' + product.image.image" alt="" class="w-20">
           </td>
           <td class="px-6 py-4">{{product.name}}</td>
           <td class="px-6 py-4">{{product.price}} </td>
