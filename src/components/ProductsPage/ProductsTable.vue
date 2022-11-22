@@ -15,6 +15,7 @@
           <th scope="col" class="px-6 py-3">اسم المنتج</th>
           <th scope="col" class="px-6 py-3"> سعر المنتج</th>
           <th scope="col" class="px-6 py-3">الحاله</th>
+          <th scope="col" class="px-6 py-3">الكمية</th>
           <th scope="col" class="px-6 py-3">
             <span class="sr-only">Edit</span>
           </th>
@@ -46,6 +47,8 @@
           <td class="px-6 py-4"> 
            متوفر
           </td>
+          <td class="px-6 py-4">{{product.qty}} </td>
+
             <td class="px-6 py-4">
               <router-link :to="{ name: 'EditProduct', params: { id: product.id } }">
                  <a

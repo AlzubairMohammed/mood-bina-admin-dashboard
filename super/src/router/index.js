@@ -14,6 +14,7 @@ import EditUser from '../views/EditUser.vue'
 import PaymentsPage from '../views/PaymentsPage.vue'
 import PaymentsDetails from '../views/PaymentsDetails.vue'
 import LastPayments from '../views/LastPayments.vue'
+import ProfilePage from '../views/ProfilePage.vue'
 
 const routes = [
   {
@@ -90,6 +91,11 @@ const routes = [
     path:"/LastPayments",
     name:"LastPayments",
     component:LastPayments
+  },
+  {
+    path:"/ProfilePage",
+    name:"ProfilePage",
+    component:ProfilePage
   },
 ]
 

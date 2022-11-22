@@ -140,7 +140,7 @@
     <div class="floating-input mb-5 relative">
       <input
         type="number"
-        id="phone"
+        id="qty"
         name="qty"
         class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
         placeholder=" "
@@ -152,6 +152,42 @@
         class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
       >
         الكميه</label
+      >
+    </div>
+
+     <div class="floating-input mb-5 relative">
+      <input
+        type="number"
+        id="disc"
+        name="disc"
+        class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
+        placeholder=" "
+        autocomplete="off"
+        v-model="disc"
+      />
+      <label
+        for="disc"
+        class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
+      >
+        الضريبه المضافه</label
+      >
+    </div>
+
+    <div class="floating-input mb-5 relative">
+      <input
+        type="number"
+        id="total"
+        name="total"
+        class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
+        placeholder=" "
+        autocomplete="off"
+        v-model="total"
+      />
+      <label
+        for="total"
+        class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
+      >
+         اجمالي السعر</label
       >
     </div>
 
