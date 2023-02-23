@@ -77,6 +77,84 @@
       >
     </div>
 
+        <div class="floating-input mb-5 relative">
+      <input
+        type="number"
+        id="phone"
+        name="price"
+        class="
+          border border-gray-200
+          focus:outline-none
+          rounded-md
+          focus:border-gray-500 focus:shadow-sm
+          w-full
+          p-3
+          h-16
+        "
+        placeholder=" "
+        autocomplete="off"
+        v-model="product.price"
+      />
+      <label
+        for="phone"
+        class="
+          absolute
+          top-0
+          right-0
+          px-3
+          py-5
+          h-full
+          pointer-events-none
+          transform
+          origin-left
+          transition-all
+          duration-100
+          ease-in-out
+        "
+      >
+        سعر الشراء</label
+      >
+    </div>
+
+        <div class="floating-input mb-5 relative">
+      <input
+        type="number"
+        id="phone"
+        name="price"
+        class="
+          border border-gray-200
+          focus:outline-none
+          rounded-md
+          focus:border-gray-500 focus:shadow-sm
+          w-full
+          p-3
+          h-16
+        "
+        placeholder=" "
+        autocomplete="off"
+        v-model="product.price"
+      />
+      <label
+        for="phone"
+        class="
+          absolute
+          top-0
+          right-0
+          px-3
+          py-5
+          h-full
+          pointer-events-none
+          transform
+          origin-left
+          transition-all
+          duration-100
+          ease-in-out
+        "
+      >
+        الضريبه</label
+      >
+    </div>
+
     <div class="floating-input mb-5 relative">
       <input
         type="number"
@@ -116,83 +194,59 @@
       >
     </div>
 
-      <div class="floating-input mb-5 relative">
-      <input
-        type="number"
-        id="disc"
-        name="disc"
-        class="
-          border border-gray-200
-          focus:outline-none
-          rounded-md
-          focus:border-gray-500 focus:shadow-sm
-          w-full
-          p-3
-          h-16
-        "
-        placeholder=" "
-        autocomplete="off"
-        v-model="product.disc"
-      />
-      <label
-        for="disc"
-        class="
-          absolute
-          top-0
-          right-0
-          px-3
-          py-5
-          h-full
-          pointer-events-none
-          transform
-          origin-left
-          transition-all
-          duration-100
-          ease-in-out
-        "
-      >
-        الضريبه المضافه</label
-      >
-    </div>
 
-      <div class="floating-input mb-5 relative">
-      <input
-        type="number"
-        id="total"
-        name="total"
-        class="
-          border border-gray-200
-          focus:outline-none
-          rounded-md
-          focus:border-gray-500 focus:shadow-sm
-          w-full
-          p-3
-          h-16
-        "
-        placeholder=" "
-        autocomplete="off"
-        v-model="product.total"
-      />
-      <label
-        for="total"
-        class="
-          absolute
-          top-0
-          right-0
-          px-3
-          py-5
-          h-full
-          pointer-events-none
-          transform
-          origin-left
-          transition-all
-          duration-100
-          ease-in-out
-        "
-      >
-        اجمالي السعر</label
-      >
-    </div>
+        <div class="total-price">
+            <div class="shadow p-4">
+              
+               
+                <div class="products grid grid-cols-2">
+                  <div color="dark">
+                    <span> تكلفه المنتج</span>
+                  </div>
+                  <div color="dark" class="">
+                    <span class="font-semibold"
+                      >{{
+                        totalCart
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                      }}
+                      <span class="text-[12px]"> ر.س</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="products grid grid-cols-2">
+                  <div color="dark">
+                    <span> السعر مع الضريبه</span>
+                  </div>
+                  <div color="dark" class="">
+                    <span class="font-semibold ml-8"
+                      >{{
+                        delPrice
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                      }}
+
+                      <span class="text-[12px]"> ر.س</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="products grid grid-cols-2">
+                  <div color="dark">
+                    <span style="font-size: 17px">المجموع الكلي</span>
+                  </div>
+                  <div color="dark" class="">
+                    <span class="font-semibold" style="font-size: 17px"
+                      >{{
+                        (totalCart + delPrice)
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                      }}
+                      <span class="text-[12px]"> ر.س</span>
+                    </span>
+                  </div>
+                </div>
+            </div>
+          </div>
 
     <label
       for="countries"
