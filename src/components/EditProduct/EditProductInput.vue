@@ -73,7 +73,7 @@
           ease-in-out
         "
       >
-        السعر</label
+        سعر الشراء</label
       >
     </div>
 
@@ -112,7 +112,7 @@
           ease-in-out
         "
       >
-        سعر الشراء</label
+        سعر البيع</label
       >
     </div>
 
@@ -198,22 +198,6 @@
         <div class="total-price">
             <div class="shadow p-4">
               
-               
-                <div class="products grid grid-cols-2">
-                  <div color="dark">
-                    <span> تكلفه المنتج</span>
-                  </div>
-                  <div color="dark" class="">
-                    <span class="font-semibold"
-                      >{{
-                        totalCart
-                          .toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                      }}
-                      <span class="text-[12px]"> ر.س</span>
-                    </span>
-                  </div>
-                </div>
                 <div class="products grid grid-cols-2">
                   <div color="dark">
                     <span> السعر مع الضريبه</span>
@@ -232,7 +216,7 @@
                 </div>
                 <div class="products grid grid-cols-2">
                   <div color="dark">
-                    <span style="font-size: 17px">المجموع الكلي</span>
+                    <span style="font-size: 17px">الربح</span>
                   </div>
                   <div color="dark" class="">
                     <span class="font-semibold" style="font-size: 17px"
@@ -312,6 +296,8 @@ export default {
   data() {
     return {
       product: {},
+      delPrice: 0,
+      totalCart: 0,
       sub_section_id:this.$route.params.id,
     };
   },

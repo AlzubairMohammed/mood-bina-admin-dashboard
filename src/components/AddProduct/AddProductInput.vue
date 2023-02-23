@@ -133,7 +133,7 @@
         for="sell_price"
         class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
       >
-        سعر المنتج</label
+        سعر الشراء</label
       >
     </div>
 
@@ -151,7 +151,7 @@
         for="sell_price"
         class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
       >
-        سعر الشراء</label
+        سعر البيع</label
       >
     </div>
 
@@ -195,22 +195,6 @@
         <div class="total-price">
             <div class="shadow p-4">
               
-               
-                <div class="products grid grid-cols-2">
-                  <div color="dark">
-                    <span> تكلفه المنتج</span>
-                  </div>
-                  <div color="dark" class="">
-                    <span class="font-semibold"
-                      >{{
-                        totalCart
-                          .toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                      }}
-                      <span class="text-[12px]"> ر.س</span>
-                    </span>
-                  </div>
-                </div>
                 <div class="products grid grid-cols-2">
                   <div color="dark">
                     <span> السعر مع الضريبه</span>
@@ -229,7 +213,7 @@
                 </div>
                 <div class="products grid grid-cols-2">
                   <div color="dark">
-                    <span style="font-size: 17px">المجموع الكلي</span>
+                    <span style="font-size: 17px">الربح</span>
                   </div>
                   <div color="dark" class="">
                     <span class="font-semibold" style="font-size: 17px"
@@ -342,7 +326,9 @@ export default {
     return {
       success: false,
       failed: false,
-      error: ''
+      error: '',
+      totalCart: 0,
+      delPrice: 0
     };
   },
   methods: {

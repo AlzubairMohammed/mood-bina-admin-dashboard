@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
     state: {
         subSections:[],
-        session_url: "http://localhost:5000/api/v1/subSections"
+        session_url: "https:mod-bina.com/api/v1/subSections"
     },
     getters: {
         allSubSections: (state)=>{
