@@ -182,6 +182,7 @@
         placeholder=" "
         autocomplete="off"
         v-model="sellPrice"
+value="15"
       />
       <label
         for="sell_price"
