@@ -44,15 +44,19 @@ export default {
         timer: 2000,
       });
     },
-    
-
   },
   provide() {
     return {
       checkCookie: this.checkCookie,
       responseAlert: this.responseAlert,
     };
-  }
+  },
+  mounted() {
+    this.$store.dispatch("fetchCategories");
+    this.$store.dispatch("fetchProducts");
+    this.$store.dispatch("getUser");
+    this.$store.dispatch("fetchSubCategories");
+  },
 };
 </script>
 
