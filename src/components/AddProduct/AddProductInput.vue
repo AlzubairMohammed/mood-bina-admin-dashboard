@@ -103,6 +103,24 @@
       </button>
     </div>
 
+<div class="floating-input mb-5 relative">
+      <input
+        type="text"
+        id="d"
+        name="id"
+        class="border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16"
+        placeholder=" "
+        autocomplete="off"
+        v-model="id"
+      />
+      <label
+        for="email"
+        class="absolute top-0 right-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
+        >رقم المنتج</label
+      >
+    </div>
+
+
     <div class="floating-input mb-5 relative">
       <input
         type="text"
